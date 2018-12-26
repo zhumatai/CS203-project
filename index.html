@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Linkin Park</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" type="image/png" href="images/title_logo.png">
+	<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+	<link rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="main_logo">
+				<a href="index.html"><img src="images/main_logo.png" alt="Linkin Park"></a>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="albums.html">Albums</a></li>
+					<li><a href="videos.html">Videos</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<!-- <li><a href="shop.html">Shop</a></li> -->
+					<li><a href="about.html">About</a></li>
+				</ul>
+			</nav>
+			<div class="faces_lp">
+				<img src="images/faces_lp.png">
+		    </div>
+		</div>
+	</header>
+	<!-- <section> -->
+		<div class="container">
+			<div class="slide-box">
+				<div class="slides fade_in">
+					<div><img class="image_fix" src="images/test3.png"></div>
+					<a href="https://www.youtube.com/watch?v=9VoLHdADma8" target="_blank"><span class="view_more">view more</span></a>
+			    </div>
+			    <div class="slides fade_in">
+			    	<div><img class="image_fix" src="images/test.png"></div>
+			    	<a href="http://chester.linkinpark.com/" target="_blank"><span class="view_more">view more</span></a>
+			    </div>
+			    <div class="slides fade_in">
+			    	<div><img class="image_fix" src="images/jk_linkin_park2.png"></div>
+			    	<a href="https://www.youtube.com/watch?v=CgwL14IDDJY" target="_blank"><span class="view_more">view more</span></a>
+			    </div>
+			    <div class="slides fade_in">
+			    	<div><img class="image_fix" src="images/test4.png"></div>
+			    	<a href="https://www.youtube.com/watch?v=9VoLHdADma8" target="_blank"><span class="view_more">view more</span></a>
+			    </div>	
+			    <a id="prev" onclick="plusIndex(-1)">&#10094;</a>
+			    <a id="next" onclick="plusIndex(+1)">&#10095;</a>
+			</div>
+			<div class="dots_nav">
+				<span class="dots" onclick = "currentSlide(1)"></span>
+		        <span class="dots" onclick = "currentSlide(2)"></span>
+		        <span class="dots" onclick = "currentSlide(3)"></span>
+		        <span class="dots" onclick = "currentSlide(4)"></span>
+	        </div>
+		</div>
+	<!-- </section> -->
+	<!-- <section> -->
+		
+		</div>
+	<!-- </section> -->
+	<!-- <section> -->
+		<div class="container">
+			<!-- <div class="videos">
+				<video src="videos/Linkin Park - Talking To Myself.mp4" controls="controls" loop="loop"></video>
+				<a href="https://www.youtube.com/user/linkinparktv/videos" target="_blank"><span id="view_more">view more on YouTube</span></a>
+			</div> -->
+		</div>
+	<!-- </section> -->
+	<!-- <section> -->
+		<div class="container">
+			
+		</div>
+	<!-- </section> -->
+	<footer>
+		<div class="container">
+			<div id="heart">
+				<img src="images/heart.gif">
+		    </div>
+		    <p>&copy2018 Linkin Park</p>
+			<div class="social_icons">
+				<ul>
+					<li><i class="fa fa-facebook  fa-3x" aria-hidden="true"></i></li>
+					<li><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></li>
+					<li><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></li>
+					<li><i class="fa fa-google fa-3x" aria-hidden="true"></i></li>
+					<li><i class="fa fa-whatsapp fa-3x" aria-hidden="true"></i></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		var slideIndex = 1;
+
+		showImage(slideIndex);
+
+		function plusIndex(n){
+			showImage(slideIndex += n);
+		}
+
+		function currentSlide(n){
+			showImage(slideIndex = n);
+		}
+		function showImage(n){
+			var slide = document.getElementsByClassName("slides");
+			var dots = document.getElementsByClassName("dots");
+
+			if (n > slide.length) { slideIndex = 1;};
+			if(n < 1){ slideIndex = slide.length};
+
+			for (var i = 0; i < slide.length; i++) {
+				slide[i].style.display = "none";
+			};
+			slide[slideIndex-1].style.display = "block";
+
+			for (var i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+
+			dots[slideIndex-1].className += " active";
+		}
+	</script>
+
+
+</body>
+</html>
